@@ -20,7 +20,7 @@ if (true) {
 console.log(a); // 5
 console.log(b); // Error: b is not defined
 
-//  const o'zgarmas qiymat e'lon qilishligiga misol
+//  const o'zgarmas qiymat e'lon qilishligiga misol.
 const k = 342;
 k = 7878;   // o'zgartirish
 console.log(k); // TypeError: Assignment to constant variable.
