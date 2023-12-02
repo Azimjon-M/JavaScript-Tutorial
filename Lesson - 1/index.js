@@ -8,7 +8,7 @@ const c = 33; //  const o'zgarmas o'zgaruvchilarni e'lon qilish uchun
 console.log(x); // undefined
 var x = 5;
 
-// console.log(y); // Error: "y" is not defined
+console.log(y); // Error: "y" is not defined
 let y = 10;
 
 //  ****************
