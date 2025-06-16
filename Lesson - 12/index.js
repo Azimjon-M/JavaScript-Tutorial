@@ -1,39 +1,39 @@
 // Object
 
-let obj = { key: "value" };
+let obj = { key: 'value' };
 
 const obj1 = {};
 const obj2 = new Object();
 
 const per = {
     id: 1,
-    name: "Azimjon",
+    name: 'Azimjon',
     age: 25,
 };
 
-let name = "name";
+let name = 'name';
 
 // console.log(per.name);
 // console.log(per["name"]);
 // console.log(per[name]);
 
 // Freeze
-obj.name = "Add Clone";
+obj.name = 'Add Clone';
 // console.log(obj); // { key: 'value', name: 'Add Clone' }
 
 Object.freeze(obj);
 obj.start = true; // not adding!
 delete obj.name; // not deleting!
-obj.name = "Changed name"; // not Changing!
+obj.name = 'Changed name'; // not Changing!
 // console.log(obj); // { key: 'value', name: 'Add Clone' }
 
 // Seal, structuredClone (Clonlash, obj linki 2x)
 const newObj = structuredClone(obj);
 Object.seal(newObj);
 // console.log(newObj); // { key: 'value', name: 'Add Clone' }
-newObj.qr = "Quar Code"; // not adding!
+newObj.qr = 'Quar Code'; // not adding!
 delete newObj.name; // not deleting!
-newObj.name = "Islom"; // But is Changed
+newObj.name = 'Islom'; // But is Changed
 // console.log(newObj); // { key: 'value', name: 'Islom' }
 
 // Object with For in
@@ -48,7 +48,7 @@ newObj.name = "Islom"; // But is Changed
 // Object key va value lari type: number bo'lganlarini topish
 let obj4 = {
     id: 1,
-    name: "Azimjon",
+    name: 'Azimjon',
     start: false,
     2025: 25,
     end: true,
@@ -89,3 +89,38 @@ let obj4 = {
 //     return "Bundayi yo'q"
 // };
 // console.log(CheckByName(obj4, "Azimjon"));
+
+// let obj5 = {
+//     id: 1,
+//     name: 'Azimjon',
+//     child: {
+//         id: 2,
+//         name: 'Islom',
+//         child: {
+//             id: 3,
+//             name: 'Aziz',
+//         },
+//     },
+// };
+// let totalID = 0;
+
+// while (obj5) {
+//     totalID += obj5.id;
+
+//     obj5 = obj5.child;
+// }
+// console.log(`Total ID: ${totalID}`); // Total ID: 6
+
+// let obj6 = {
+//     name: 'Azimjon',
+//     age: 25,
+//     title: 'Software Engineer',
+// };
+
+// const SearchByTitle = (obj) => {
+//     if (obj.title) console.log(obj.title)
+//     else console.log('Title not found');
+// };
+// SearchByTitle(obj6); // name age
+
+
